@@ -4,7 +4,7 @@ MINIMUM_STRING_LENGTH = 8
 
 
 def check_password_properties(password):
-    length = bool(len(password) >= 8)
+    length = bool(len(password) >= MINIMUM_STRING_LENGTH)
     has_upper_character = bool(re.search(r'[A-Z]', password))
     has_lower_character = bool(re.search(r'[a-z]', password))
     has_number = bool(re.search(r'\d', password))
