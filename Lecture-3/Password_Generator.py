@@ -11,6 +11,7 @@ def main():
         password.append(character)
     final_password = (''.join(password))
     print(f'your final password is {final_password}')
-
+    with open('password.txt', 'w') as out_file:
+        print(password, file=out_file)
 
 main()

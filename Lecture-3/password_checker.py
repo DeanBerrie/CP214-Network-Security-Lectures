@@ -29,6 +29,6 @@ def main():
             print("Password does not contain a symbol!")
         password = input("Password: ")
         length, has_upper_character, has_lower_character, has_number, has_symbol = check_password_properties(password)
-
-
+    with open('password.txt', 'w') as out_file:
+        print(password, file=out_file)
 main()
