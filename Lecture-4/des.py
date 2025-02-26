@@ -17,6 +17,7 @@ def main():
     decrypted_text = des_decrypt(ciphertext, key, iv)
     print(f"Decrypted with key: {decrypted_text}")
 
+
 def des_encrypt(plaintext, key):
     """Encrypt text using DES."""
 
@@ -36,6 +37,7 @@ def des_decrypt(ciphertext, key, iv):
     decrypted_text = cipher.decrypt(ciphertext)
 
     return unpad(decrypted_text, DES.block_size).decode()
+
 
 if __name__ == '__main__':
     main()
